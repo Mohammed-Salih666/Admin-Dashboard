@@ -25,32 +25,36 @@ body {
 
 .sidebar > .dashboard-logo {
     flex-direction: row;
+    justify-content: center;
+    color: white;
 }
 
 .sidebar > .dashboard-logo > svg {
     width: 20%;
 }
 
-.sidebar > * {
+.sidebar a {
     color: white;
     font-weight: bold;
-    margin-left: 5%;
-
+    margin-left: 12%;
+    font-size: 1.5em;
 }
 
  a {
+    font-size: 1.2em;
     text-decoration: none;
     margin-bottom: 5%;
-    font-size: 1.2em;
     color: white;
     font-weight: bold;
 }
 
-a:hover {
+.sidebar a:hover {
     color:rgb(241, 212, 95);
+    font-size: 1.7em;
 }
 
 .header {
+    position: relative;
     grid-row: 1 /2;
     display: grid;
     width: 100%;
@@ -90,10 +94,13 @@ a:hover {
     border-radius: 25px; 
     color: white;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.2em;
     width: 20%;
-    height: 40%;
+    height: 45%;
     margin-right: 5%;
+}
+.nav-buttons > button:hover {
+    color:rgb(241, 212, 95);
 }
 
 .search-bar > input {
@@ -118,19 +125,15 @@ a:hover {
     display: grid;
     overflow: auto;
     grid-template-columns: 3fr 1fr;
-    gap: 2%;
     background-color: #E5E7EB;
 }
 
 .main > div {
-    border-radius: 15px;
-     padding: 2%;
+    margin: 20px;
 }
 
 .projects-container {
     display: grid;
-    /* overflow: auto; */
-    /* grid-template: 1fr 1fr 1fr / 1fr 1fr; */
     grid-template-columns: repeat(auto-fill, minmax(200px, 48%));
     gap: 3%;
 }
@@ -141,8 +144,6 @@ a:hover {
     background-color: white;
     display: flex; 
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
     padding: 4%;
     border-left: solid rgb(241, 212, 95) 10px;
 }
@@ -160,16 +161,9 @@ a:hover {
     width: 7%;
 }
 
-.right-container,
-.right-container > div {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
-    gap: 3%;
-}
 .right-container {
     overflow: auto;
+    height: 100%;
 }
 .right-container::-webkit-scrollbar{
     display: none;
@@ -183,11 +177,15 @@ a:hover {
     padding: 5%;
 }
 
+.announcement > div {
+    padding: 3%;
+}
+
 .trending > div {
     display: flex;
     justify-content: flex-start;
     line-height: 20%;
-    margin-bottom: 5%;
+    padding: 2%;
 }
 
 .trending img {
